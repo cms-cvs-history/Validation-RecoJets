@@ -1,0 +1,39 @@
+# ------------------------------------
+# apply jetmet calibration for icone5
+# ------------------------------------
+  include "JetMETCorrections/MCJet/data/MCJetCorrections152.cff"
+  es_prefer MCJetCorrectorIcone5 = MCJetCorrectionService {}
+
+  sequence makeMonoIcone5 = {MCJetCorJetIcone5}
+
+# ------------------------------------
+# apply jetmet calibration for icone7 
+# ------------------------------------
+  include "JetMETCorrections/MCJet/data/MCJetCorrections152.cff"
+  es_prefer MCJetCorrectorIcone7 = MCJetCorrectionService {}
+
+  sequence makeMonoIcone7 = {MCJetCorJetIcone7}
+
+# ------------------------------------
+# apply jetmet calibration for midpoint 5
+# ------------------------------------
+  include "JetMETCorrections/MCJet/data/MCJetCorrections152.cff"
+  es_prefer MCJetCorrectorMcone5 = MCJetCorrectionService {}
+
+  sequence makeMonoMcone5 = {MCJetCorJetMcone5}
+
+# ------------------------------------
+# apply jetmet calibration for midpoint 7
+# ------------------------------------
+  include "JetMETCorrections/MCJet/data/MCJetCorrections152.cff"
+  es_prefer MCJetCorrectorMcone7 = MCJetCorrectionService {}
+
+  sequence makeMonoMcone7 = {MCJetCorJetMcone7}
+
+# ------------------------------------
+# apply jetmet calibration for fastjet6
+# ------------------------------------
+  include "JetMETCorrections/MCJet/data/MCJetCorrections152.cff"
+  es_prefer MCJetCorrectorfastjet6 = MCJetCorrectionService {}
+
+  sequence makeMonoFastjet6 = {MCJetCorJetfastjet6}

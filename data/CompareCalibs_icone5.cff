@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------
+# prepare JetComparison for std calibration methods
+# ---------------------------------------------------------------
+  module  uhhVsFact = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+  module  factVsUhh = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+  module  uhhVsMono = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+  module  monoVsUhh = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+
+# ---------------------------------------------------------------
+# replace jet collection corresponding to calibration method
+# ---------------------------------------------------------------
+  replace uhhVsFact.recs = uhhCaliIterativeCone5
+  replace uhhVsFact.refs = L3JetCorJetIcone5
+  replace factVsUhh.recs = L3JetCorJetIcone5
+  replace factVsUhh.refs = uhhCaliIterativeCone5
+  replace uhhVsMono.recs = uhhCaliIterativeCone5
+  replace uhhVsMono.refs = MCJetCorJetIcone5
+  replace monoVsUhh.recs = MCJetCorJetIcone5
+  replace monoVsUhh.refs = uhhCaliIterativeCone5
+
+#
+  sequence makeUhhVsFactComparison  = {uhhVsFact}
+  sequence makeFactVsUhhComparison  = {factVsUhh}
+  sequence makeUhhVsMonoComparison  = {uhhVsMono}
+  sequence makeMonoVsUhhComparison  = {monoVsUhh}
+  sequence makeComparison_fact      = {uhhVsFact, factVsUhh}
+  sequence makeComparison_mono      = {uhhVsMono, monoVsUhh}
+
+
+# ---------------------------------------------------------------
+# prepare JetComparison fully steerable
+# ---------------------------------------------------------------
+  include "Calibration/CalibUtils/data/CompareCalibs.cfi"
+
+# reconfigure reference collection
+# replace compareCalibs.refs = iterativeCone5CaloJets
+# replace compareCalibs.refs = uhhCaliIterativeCone5
+# replace compareCalibs.refs = MCJetCorJetIcone5
+  replace compareCalibs.refs = L3JetCorJetIcone5
+
+# reconfigure sample collection
+# replace compareCalibs.recs = iterativeCone5CaloJets
+  replace compareCalibs.recs = uhhCaliIterativeCone5
+# replace compareCalibs.recs = MCJetCorJetIcone5
+# replace compareCalibs.recs = L3JetCorJetIcone5
+
+#
+  sequence makeComparison = {compareCalibs}

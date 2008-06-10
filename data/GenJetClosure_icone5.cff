@@ -1,12 +1,12 @@
 # ---------------------------------------------------------------
 # prepare GenJetClosure for all available calibration methods
 # ---------------------------------------------------------------
-  module  noCalib    = genJetClosure from "Calibration/CalibUtils/data/GenJetClosure.cfi"
-  module  uhhCalib   = genJetClosure from "Calibration/CalibUtils/data/GenJetClosure.cfi"
-  module  jetMetMono = genJetClosure from "Calibration/CalibUtils/data/GenJetClosure.cfi"
-  module  jetMetFact = genJetClosure from "Calibration/CalibUtils/data/GenJetClosure.cfi"
-  module  jetMetL2   = genJetClosure from "Calibration/CalibUtils/data/GenJetClosure.cfi"
-  module  jetMetL3   = genJetClosure from "Calibration/CalibUtils/data/GenJetClosure.cfi"
+  module  noCalib    = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
+  module  uhhCalib   = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
+  module  jetMetMono = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
+  module  jetMetFact = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
+  module  jetMetL2   = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
+  module  jetMetL3   = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
 
 # ---------------------------------------------------------------
 # replace jet collection corresponding to calibration method
