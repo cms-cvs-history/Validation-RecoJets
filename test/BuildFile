@@ -1,5 +1,0 @@
-<use name=root>
-<use name=rootcore>
-
-<bin file=compareHists.cc></bin>	
-<bin file=plotHists.cc></bin>
