@@ -3,7 +3,7 @@
 
 // Producer for validation histograms for CaloJet objects
 // F. Ratnikov, Sept. 7, 2006
-// $Id: CaloJetTester.h,v 1.2 2007/02/21 01:53:40 fedor Exp $
+// $Id: CaloJetTester.h,v 1.3.2.2 2008/06/10 16:14:36 rwolf Exp $
 
 #include <string>
 

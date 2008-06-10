@@ -1,6 +1,6 @@
 // Producer for validation histograms for CaloJet objects
 // F. Ratnikov, Sept. 7, 2006
-// $Id: CaloJetTester.cc,v 1.3 2007/03/07 18:43:44 fedor Exp $
+// $Id: CaloJetTester.cc,v 1.8.2.2 2008/06/10 16:19:49 rwolf Exp $
 
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
 #include "FWCore/Framework/interface/Event.h"
@@ -14,7 +14,7 @@
 #include "DataFormats/JetReco/interface/CaloJet.h"
 
 
-#include "Validation/RecoJets/interface/CaloJetTester.h"
+#include "Validation/RecoJets/plugins/CaloJetTester.h"
 
 using namespace edm;
 using namespace reco;

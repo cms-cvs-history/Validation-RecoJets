@@ -1,0 +1,28 @@
+# ---------------------------------------------------------------
+# prepare PartonClosure for all available calibration methods
+# ---------------------------------------------------------------
+  module  noCalib    = partonClosure from "Calibration/CalibUtils/data/PartonClosure.cfi"
+  module  uhhCalib   = partonClosure from "Calibration/CalibUtils/data/PartonClosure.cfi"
+  module  jetMetMono = partonClosure from "Calibration/CalibUtils/data/PartonClosure.cfi"
+  module  jetMetFact = partonClosure from "Calibration/CalibUtils/data/PartonClosure.cfi"
+  module  jetMetL2   = partonClosure from "Calibration/CalibUtils/data/PartonClosure.cfi"
+  module  jetMetL3   = partonClosure from "Calibration/CalibUtils/data/PartonClosure.cfi"
+
+# ---------------------------------------------------------------
+# replace jet collection corresponding to calibration method
+# ---------------------------------------------------------------
+  replace noCalib.recs    = iterativeCone5CaloJets
+  replace uhhCalib.recs   = uhhCaliIterativeCone5
+  replace jetMetMono.recs = MCJetCorJetIcone5
+  replace jetMetFact.recs = L3JetCorJetIcone5
+  replace jetMetL2.recs   = L2JetCorJetIcone5
+  replace jetMetL3.recs   = L3JetCorJetIcone5
+
+#
+  sequence makeNoCalibClosure    = {noCalib}
+  sequence makeUhhCalibClosure   = {uhhCalib}
+  sequence makeJetMetMonoClosure = {jetMetMono}
+  sequence makeJetMetFactClosure = {jetMetFact}
+  sequence makeJetMetFactL2L3    = {noCalib & jetMetL2 & jetMetL3}
+  sequence makeAllClosure_mono   = {noCalib & uhhCalib & jetMetMono}
+  sequence makeAllClosure_fact   = {noCalib & uhhCalib & jetMetFact}

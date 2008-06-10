@@ -1,0 +1,29 @@
+<environment>
+ <use name=root> 
+ <use name=Validation/RecoJets>
+ <bin file="CalibClosureTest.cc"> </bin>
+</environment>
+
+<environment>
+ <use name=root> 
+ <use name=Validation/RecoJets>
+ <bin file="Inspect_calib.cc"> </bin>
+</environment>
+
+<environment>
+ <use name=root> 
+ <use name=Validation/RecoJets>
+ <bin file="InspectSum_calib.cc"> </bin>
+</environment>
+
+<environment>
+ <use name=root> 
+ <use name=Validation/RecoJets>
+ <bin file="InspectRatio_calib.cc"> </bin>
+</environment>
+
+<environment>
+ <use name=root> 
+ <use name=Validation/RecoJets>
+ <bin file="InspectFit_calib.cc"> </bin>
+</environment>
