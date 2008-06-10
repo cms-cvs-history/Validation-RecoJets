@@ -1,0 +1,41 @@
+module genJetClosure = GenJetClosure{          
+ # ---------------------------------------------------------------
+ # input
+ # ---------------------------------------------------------------
+   InputTag recs   = iterativeCone5CaloJets
+   InputTag refs   = iterativeCone5GenJetsPt10
+ # use this GenJetCollection in case of PhotonJet sample
+ # InputTag refs   = iterativeCone5GenJets
+
+ # ---------------------------------------------------------------
+ # histogram directory
+ # ---------------------------------------------------------------
+   string  hist    = "genJetClosure.hist"  
+
+ # ---------------------------------------------------------------
+ # pt bins for calibration
+ # ---------------------------------------------------------------
+   int32   type    =   0   # comparison type (0:ratio/1:rel diff)
+   int32   bins    = 200
+   double  min     =   0.
+   double  max     =   2.
+   vdouble binsPt  = {30., 50., 70., 100., 130., 160., 200., 250., 300.}
+   vdouble binsEta = {-3.0, -1.4, 0., 1.4, 3.0}
+
+ # ---------------------------------------------------------------
+ # configure visible range and reconstruction quality
+ # ---------------------------------------------------------------
+   double maxDR         =  0.3
+   double minPtRef      =    5.
+   double maxPtRef      =  999.
+   double minPtRec      =   15.
+   double maxPtRec      =  999.
+   double minEtaRef     = -3.0
+   double maxEtaRef     =  3.0
+   double minEtaRec     = -5.0
+   double maxEtaRec     =  5.0
+   double minEmfGenJet  = 0.00
+   double maxEmfGenJet  = 0.95
+   double minEmfCaloJet = 0.00
+   double maxEmfCaloJet = 1.00
+}
