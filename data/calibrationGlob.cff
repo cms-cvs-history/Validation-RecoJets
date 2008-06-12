@@ -1,0 +1,10 @@
+#
+# include modules and services
+#
+  include "Calibration/CalibMaker/data/calibJets.cff"
+
+#
+# sequences
+#
+  sequence makeGlobIcone5 = {makeUhhCaliIterativeCone5Jets}
+  sequence makeGlobAll    = {makeUhhCaliIterativeCone5Jets}

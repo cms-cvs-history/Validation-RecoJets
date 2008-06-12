@@ -1,0 +1,13 @@
+# ---------------------------------------------------------------
+# prepare GenJetClosure for all available calibration methods
+# ---------------------------------------------------------------
+  module  myClosure = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
+
+# ---------------------------------------------------------------
+# replace jet collection corresponding to calibration method
+# ---------------------------------------------------------------
+#
+  replace myClosure.recs = MY_FAVORITE_REC_JET_COLLECTION
+
+#
+  sequence makeCalibClosure = {myClosure}

@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------
-# prepare JetComparison for std calib methods
+# prepare JetComparison for std calib methods [Fact/Mono/Glob]
 # ---------------------------------------------------------------
   module  globVsFact = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
   module  factVsGlob = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
@@ -12,20 +12,20 @@
 # replace jet collection corresponding to calibration method
 # ---------------------------------------------------------------
 #
-  replace globVsFact.recs = uhhCaliIterativeCone5
-  replace globVsFact.refs = L3JetCorJetIcone5
-  replace factVsGlob.recs = L3JetCorJetIcone5
-  replace factVsGlob.refs = uhhCaliIterativeCone5
+  replace globVsFact.recs = uhhCaliMidPointCone7
+  replace globVsFact.refs = L3JetCorJetMcone7
+  replace factVsGlob.recs = L3JetCorJetMcone7
+  replace factVsGlob.refs = uhhCaliMidPointCone7
 #
-  replace globVsMono.recs = uhhCaliIterativeCone5
-  replace globVsMono.refs = MCJetCorJetIcone5
-  replace monoVsGlob.recs = MCJetCorJetIcone5
-  replace monoVsGlob.refs = uhhCaliIterativeCone5
+  replace globVsMono.recs = uhhCaliMidPointCone7
+  replace globVsMono.refs = MCJetCorJetMcone7
+  replace monoVsGlob.recs = MCJetCorJetMcone7
+  replace monoVsGlob.refs = uhhCaliMidPointCone7
 #
-  replace factVsMono.recs = L3JetCorJetIcone5
-  replace factVsMono.refs = MCJetCorJetIcone5
-  replace monoVsFact.recs = MCJetCorJetIcone5
-  replace monoVsFact.refs = L3JetCorJetIcone5
+  replace factVsMono.recs = L3JetCorJetMcone7
+  replace factVsMono.refs = MCJetCorJetMcone7
+  replace monoVsFact.recs = MCJetCorJetMcone7
+  replace monoVsFact.refs = L3JetCorJetMcone7
 
 #
   sequence makeGlobVsFactComparison  = {globVsFact}

@@ -1,38 +1,4 @@
-es_source L2JetCorrectorIcone5 = L2RelativeCorrectionService {
-# this is the name of the data file containing the L2 
-# correction constants 
-  string tagName = 'CMSSW_152_L2Relative_iterativeCone5'
-  string label = 'L2RelativeJetCorrectorIcone5'                          
-}
-
-es_source L3JetCorrectorIcone5 = L3AbsoluteCorrectionService { 
-# this is the name of the data file containing the L3 
-# correction constants
-  string tagName = 'CMSSW_152_L3Absolute_iterativeCone5'
-  string label = 'L3AbsoluteJetCorrectorIcone5' 
-}
-
-# Pick JetCorrectionService to set record's IOV
-es_prefer L2JetCorrectorIcone5 = L2RelativeCorrectionService {}
-
-module L2JetCorJetIcone5 = JetCorrectionProducer { 
-# this is the name of the L2 input jet collection 
-# (uncorrected)
-  InputTag src = iterativeCone5CaloJets
-  vstring correctors = {"L2RelativeJetCorrectorIcone5"} 
-# this is the name of the L2 output jet collection 
-# (L2 corrected)
-  untracked string alias = "L2JetCorJetIcone5"
-}
-
-module L3JetCorJetIcone5 = JetCorrectionProducer { 
-# this is the name of the L3 input jet collection 
-# (L2 corrected)
-  InputTag src = L2JetCorJetIcone5
-  vstring correctors = {"L3AbsoluteJetCorrectorIcone5"} 
-# this is the name of the L3 output jet collection 
-# (L3 corrected)
-  untracked string alias = "L3JetCorJetIcone5"
-}
-
-sequence makeFactIcone5 = {L2JetCorJetIcone5,L3JetCorJetIcone5}
+#
+# include modules and services
+#
+  include "Validation/RecoJets/data/calibrationFact_perfect.cff"

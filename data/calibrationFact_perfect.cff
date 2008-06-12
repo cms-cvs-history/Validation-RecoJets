@@ -1,0 +1,21 @@
+#
+# include modules and services
+#
+  include "JetMETCorrections/MCJet/data/L2RelativeCorrection_CSA07_perfect.cff"
+  include "JetMETCorrections/MCJet/data/L3AbsoluteCorrection_CSA07_perfect.cff"
+
+#
+# sequences
+#
+  sequence makeFactIcone5 = {L2JetCorJetIcone5,L3JetCorJetIcone5}
+  sequence makeFactMcone5 = {L2JetCorJetMcone5,L3JetCorJetMcone5}
+  sequence makeFactMcone7 = {L2JetCorJetMcone7,L3JetCorJetMcone7}
+  sequence makeFactScone5 = {L2JetCorJetScone5,L3JetCorJetScone5}
+  sequence makeFactScone7 = {L2JetCorJetScone7,L3JetCorJetScone7}
+  sequence makeFactFKt4   = {L2JetCorJetFKt4,  L3JetCorJetFKt4  }
+  sequence makeFactFKt6   = {L2JetCorJetFKt6,  L3JetCorJetFKt6  }
+  sequence makeFactIcone  = {makeFactIcone5}
+  sequence makeFactMcone  = {makeFactMcone5 & makeFactMcone7} 
+  sequence makeFactScone  = {makeFactScone5 & makeFactScone7} 
+  sequence makeFactFKt    = {makeFactFKt4   & makeFactFKt6  } 
+  sequence makeFactAll    = {makeFactIcone  & makeFactMcone & makeFactFKt6}

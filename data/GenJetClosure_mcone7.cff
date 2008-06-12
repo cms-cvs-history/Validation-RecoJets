@@ -12,12 +12,12 @@
 # replace jet collection corresponding to calibration method
 # ---------------------------------------------------------------
 #
-  replace calibNone.recs   = iterativeCone5CaloJets
-  replace calibGlob.recs   = uhhCaliIterativeCone5
-  replace calibMono.recs   = MCJetCorJetIcone5
-  replace calibFact.recs   = L3JetCorJetIcone5
-  replace calibFactL2.recs = L2JetCorJetIcone5
-  replace calibFactL3.recs = L3JetCorJetIcone5
+  replace calibNone.recs   = midPointCone7CaloJets
+  replace calibGlob.recs   = uhhCaliMidPointCone7
+  replace calibMono.recs   = MCJetCorJetMcone7
+  replace calibFact.recs   = L3JetCorJetMcone7
+  replace calibFactL2.recs = L2JetCorJetMcone7
+  replace calibFactL3.recs = L3JetCorJetMcone7
 
 #
   sequence makeCalibNoneClosure = {calibNone}

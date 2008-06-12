@@ -1,0 +1,17 @@
+# ---------------------------------------------------------------
+# prepare JetComparison fully steerable
+# ---------------------------------------------------------------
+  module  recVsRef = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+  module  refVsRec = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+
+# ---------------------------------------------------------------
+# replace jet collection corresponding to calibration method
+# ---------------------------------------------------------------
+#
+  replace recVsRef.refs = MY_FAVORITE_REF_JET_COLLECTION
+  replace recVsRef.recs = MY_FAVORITE_REC_JET_COLLECTION
+  replace refVsRec.refs = MY_FAVORITE_REC_JET_COLLECTION
+  replace refVsRec.recs = MY_FAVORITE_REF_JET_COLLECTION
+
+#
+  sequence makeRecVsRef = {recVsRef}

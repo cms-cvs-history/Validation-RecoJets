@@ -1,0 +1,26 @@
+#
+# pick your favorite jet correction service to create the event setup (but only one of them...)
+#
+
+# from the factorized approach
+  es_prefer L2JetCorrectorIcone5 = L2RelativeCorrectionService {}
+# es_prefer L2JetCorrectorMcone5 = L2RelativeCorrectionService {}
+# es_prefer L2JetCorrectorMcone7 = L2RelativeCorrectionService {}
+# es_prefer L2JetCorrectorScone5 = L2RelativeCorrectionService {}
+# es_prefer L2JetCorrectorScone7 = L2RelativeCorrectionService {}
+# es_prefer L2JetCorrectorFKt4   = L2RelativeCorrectionService {}
+# es_prefer L2JetCorrectorFKt6   = L2RelativeCorrectionService {}
+# es_prefer L3JetCorrectorIcone5 = L3RelativeCorrectionService {}
+# es_prefer L3JetCorrectorMcone5 = L3RelativeCorrectionService {}
+# es_prefer L3JetCorrectorMcone7 = L3RelativeCorrectionService {}
+# es_prefer L3JetCorrectorScone5 = L3RelativeCorrectionService {}
+# es_prefer L3JetCorrectorScone7 = L3RelativeCorrectionService {}
+# es_prefer L3JetCorrectorFKt4   = L3RelativeCorrectionService {}
+# es_prefer L3JetCorrectorFKt6   = L3RelativeCorrectionService {}
+
+# from the monolythic approach
+# es_prefer MCJetCorrectorIcone5   = MCJetCorrectionService {}
+# es_prefer MCJetCorrectorIcone7   = MCJetCorrectionService {}
+# es_prefer MCJetCorrectorMcone5   = MCJetCorrectionService {}
+# es_prefer MCJetCorrectorMcone7   = MCJetCorrectionService {}
+# es_prefer MCJetCorrectorfastjet6 = MCJetCorrectionService {}
