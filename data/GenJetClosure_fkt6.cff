@@ -20,6 +20,14 @@
   replace calibFactL3.recs = L3JetCorJetFKt6
 
 #
+  replace calibNone.refs   = fastjet6GenJetsPt10
+  replace calibGlob.refs   = fastjet6GenJetsPt10
+  replace calibMono.refs   = fastjet6GenJetsPt10
+  replace calibFact.refs   = fastjet6GenJetsPt10
+  replace calibFactL2.refs = fastjet6GenJetsPt10
+  replace calibFactL3.refs = fastjet6GenJetsPt10
+
+#
   sequence makeCalibNoneClosure = {calibNone}
   sequence makeCalibGlobClosure = {calibGlob}
   sequence makeCalibMonoClosure = {calibMono}

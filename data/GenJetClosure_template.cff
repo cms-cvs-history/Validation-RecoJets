@@ -8,6 +8,7 @@
 # ---------------------------------------------------------------
 #
   replace myClosure.recs = MY_FAVORITE_REC_JET_COLLECTION
+  replace myClosure.refs = MY_FAVORITE_REF_JET_COLLECTION
 
 #
   sequence makeCalibClosure = {myClosure}

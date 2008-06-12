@@ -22,6 +22,15 @@
   replace factFKt6.recs   = L3JetCorJetFKt6
 
 #
+  replace factIcone5.refs = iterativeCone5GenJetsPt10
+  replace factMcone5.refs = midPointCone5GenJetsPt10
+  replace factMcone7.refs = midPointCone7GenJetsPt10
+  replace factScone5.refs = sisCone5GenJetsPt10
+  replace factScone7.refs = sisCone7GenJetsPt10
+  replace factFKt4.refs   = fastjet4GenJetsPt10
+  replace factFKt6.refs   = fastjet6GenJetsPt10
+
+#
   sequence makeCalibIcone5Closure = {factIcone5}
   sequence makeCalibMcone5Closure = {factMcone5}
   sequence makeCalibMcone7Closure = {factMcone7}

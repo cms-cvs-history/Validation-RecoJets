@@ -1,0 +1,30 @@
+# ---------------------------------------------------------------
+# prepare PartonCorrection for all available calibration methods
+# ---------------------------------------------------------------
+  module  gluon   = partonCorrection from "Validation/RecoJets/data/PartonCorrection.cfi"
+  module  light   = partonCorrection from "Validation/RecoJets/data/PartonCorrection.cfi"
+  module  charm   = partonCorrection from "Validation/RecoJets/data/PartonCorrection.cfi"
+  module  beauty  = partonCorrection from "Validation/RecoJets/data/PartonCorrection.cfi"
+
+# ---------------------------------------------------------------
+# replace jet collection corresponding to calibration method
+# ---------------------------------------------------------------
+#
+  replace gluon.recs  = midPointCone7GenJetsPt10
+  replace light.recs  = midPointCone7GenJetsPt10
+  replace charm.recs  = midPointCone7GenJetsPt10
+  replace beauty.recs = midPointCone7GenJetsPt10
+
+#
+  replace gluon.partons  = {      22 }
+  replace light.partons  = { 1, 2, 3 }
+  replace charm.partons  = {       4 }
+  replace beauty.partons = {       5 }
+
+#
+  sequence makeGluonCorrection  = { gluon}
+  sequence makeLightCorrection  = { light}
+  sequence makeCharmCorrection  = { charm}
+  sequence makeBeautyCorrection = {beauty}
+  sequence makeQuarkCorrection  = { light & charm & beauty}
+  sequence makeAllCorrection    = { gluon & makeQuarkCorrection}

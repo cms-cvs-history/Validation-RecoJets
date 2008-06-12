@@ -20,6 +20,14 @@
   replace calibFactL3.recs = L3JetCorJetMcone7
 
 #
+  replace calibNone.refs   = midPointCone7GenJetsPt10
+  replace calibGlob.refs   = midPointCone7GenJetsPt10
+  replace calibMono.refs   = midPointCone7GenJetsPt10
+  replace calibFact.refs   = midPointCone7GenJetsPt10
+  replace calibFactL2.refs = midPointCone7GenJetsPt10
+  replace calibFactL3.refs = midPointCone7GenJetsPt10
+
+#
   sequence makeCalibNoneClosure = {calibNone}
   sequence makeCalibGlobClosure = {calibGlob}
   sequence makeCalibMonoClosure = {calibMono}
