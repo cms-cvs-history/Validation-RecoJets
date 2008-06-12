@@ -176,12 +176,18 @@ template <typename Ref, typename RefQualifier, typename Rec, typename RecQualifi
 void Comparison<Ref, RefQualifier, Rec, RecQualifier, Alg>::summarize()
 {
   unsigned int all=found_+missed_+failed_;
-  edm::LogInfo("MatchSummary") << "=============================================";
-  edm::LogInfo("MatchSummary") << "Reference :";
-  edm::LogInfo("MatchSummary") << "CaloJet   :";
-  edm::LogInfo("MatchSummary") << "fraction of found  jets: " << 100*found_ /all << "%";
-  edm::LogInfo("MatchSummary") << "fraction of missed jets: " << 100*missed_/all << "%";
-  edm::LogInfo("MatchSummary") << "fraction of failed jets: " << 100*failed_/all << "%";
+  if(all>0){
+    edm::LogInfo("MatchSummary") << "=============================================";
+    edm::LogInfo("MatchSummary") << "Reference :";
+    edm::LogInfo("MatchSummary") << "CaloJet   :";
+    edm::LogInfo("MatchSummary") << "fraction of found  jets: " << 100*found_ /all << "%";
+    edm::LogInfo("MatchSummary") << "fraction of missed jets: " << 100*missed_/all << "%";
+    edm::LogInfo("MatchSummary") << "fraction of failed jets: " << 100*failed_/all << "%";
+  }
+  else{
+    edm::LogWarning ( "MatchOrBalanceFault" ) 
+      << "No missed, failed nor counts found";    
+  }
 }
 
 #endif

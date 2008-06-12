@@ -16,7 +16,7 @@
   replace beauty.recs = midPointCone5GenJetsPt10
 
 #
-  replace gluon.partons  = {      22 }
+  replace gluon.partons  = {      21 }
   replace light.partons  = { 1, 2, 3 }
   replace charm.partons  = {       4 }
   replace beauty.partons = {       5 }
