@@ -1,8 +1,8 @@
 # ---------------------------------------------------------------
 # prepare JetComparison for std calib methods [Fact/Mono/Glob]
 # ---------------------------------------------------------------
-  module  scone5VsFKt6 = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
-  module  fKt6VsScone5 = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+# module  scone5VsFKt6 = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+# module  fKt6VsScone5 = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
   module  Mcone5VsFKt6 = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
   module  fKt6VsMcone5 = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
   module  icone6VsFKt6 = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
@@ -12,10 +12,10 @@
 # replace jet collection corresponding to calibration method
 # ---------------------------------------------------------------
 #
-  replace scone5VsFKt6.recs = L3JetCorScone5
-  replace scone5VsFKt6.refs = L3JetCorJetFKt6
-  replace fKt6VsScone5.recs = L3JetCorJetFKt6
-  replace fKt6VsScone5.refs = L3JetCorScone5
+# replace scone5VsFKt6.recs = L3JetCorScone5
+# replace scone5VsFKt6.refs = L3JetCorJetFKt6
+# replace fKt6VsScone5.recs = L3JetCorJetFKt6
+# replace fKt6VsScone5.refs = L3JetCorScone5
 #
   replace mcone5VsFKt6.recs = L3JetCorMcone5
   replace mcone5VsFKt6.refs = MCJetCorJetFKt6
@@ -28,12 +28,12 @@
   replace fKt6VsIcons5.refs = L3JetCorIcone5
 
 #
-  sequence makeScone5VsFKt6Comparison  = {scone5VsFKt6}
-  sequence makeFKt6VsScone5Comparison  = {fKt6VsScone5}
+# sequence makeScone5VsFKt6Comparison  = {scone5VsFKt6}
+# sequence makeFKt6VsScone5Comparison  = {fKt6VsScone5}
   sequence makeMcone5VsFKt6Comparison  = {Mcone5VsFKt6}
   sequence makeFKt6VsMcone5Comparison  = {fKt6VsMcone5}
   sequence makeIcons5VsFKt6Comparison  = {fKt4VsFKt6}
   sequence makeFKt6VsIcons5Comparison  = {fKt6VsFKt4}
-  sequence makeScone5FKt6Comparison    = {scone5VsFKt6, fKt6VsScone5}
+# sequence makeScone5FKt6Comparison    = {scone5VsFKt6, fKt6VsScone5}
   sequence makeMcone5FKt6Comparison    = {Mcone5VsFKt6, fKt6VsMcone5}
   sequence makeIcons5FKt6Comparison    = {Icons5VsFKt6, fKt6VsIcons5}
