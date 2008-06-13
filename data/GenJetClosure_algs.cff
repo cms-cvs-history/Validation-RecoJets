@@ -4,9 +4,9 @@
   module  factIcone5 = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
   module  factMcone5 = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
   module  factMcone7 = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
-  module  factScone5 = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
-  module  factScone7 = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
-  module  factFKt4   = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
+# module  factScone5 = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
+# module  factScone7 = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
+# module  factFKt4   = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
   module  factFKt6   = genJetClosure from "Validation/RecoJets/data/GenJetClosure.cfi"
 
 # ---------------------------------------------------------------
@@ -16,33 +16,32 @@
   replace factIcone5.recs = L3JetCorJetIcone5
   replace factMcone5.recs = L3JetCorJetMcone5
   replace factMcone7.recs = L3JetCorJetMcone7
-  replace factScone5.recs = L3JetCorJetScone5
-  replace factScone7.recs = L3JetCorJetScone7
-  replace factFKt4.recs   = L3JetCorJetFKt4
+# replace factScone5.recs = L3JetCorJetScone5
+# replace factScone7.recs = L3JetCorJetScone7
+# replace factFKt4.recs   = L3JetCorJetFKt4
   replace factFKt6.recs   = L3JetCorJetFKt6
 
 #
   replace factIcone5.refs = iterativeCone5GenJetsPt10
   replace factMcone5.refs = midPointCone5GenJetsPt10
   replace factMcone7.refs = midPointCone7GenJetsPt10
-  replace factScone5.refs = sisCone5GenJetsPt10
-  replace factScone7.refs = sisCone7GenJetsPt10
-  replace factFKt4.refs   = fastjet4GenJetsPt10
+# replace factScone5.refs = sisCone5GenJetsPt10
+# replace factScone7.refs = sisCone7GenJetsPt10
+# replace factFKt4.refs   = fastjet4GenJetsPt10
   replace factFKt6.refs   = fastjet6GenJetsPt10
 
 #
   sequence makeCalibIcone5Closure = {factIcone5}
   sequence makeCalibMcone5Closure = {factMcone5}
   sequence makeCalibMcone7Closure = {factMcone7}
-  sequence makeCalibScone5Closure = {factScone5}
-  sequence makeCalibScone7Closure = {factScone7}
-  sequence makeCalibFKt4Closure   = {factFKt4  }
+# sequence makeCalibScone5Closure = {factScone5}
+# sequence makeCalibScone7Closure = {factScone7}
+# sequence makeCalibFKt4Closure   = {factFKt4  }
   sequence makeCalibFKt6Closure   = {factFKt6  }
   sequence makeCalibIconeClosure  = {factIcone5}
   sequence makeCalibMconeClosure  = {factMcone5 & factMcone7}
-  sequence makeCalibSconeClosure  = {factScone5 & factScone7}
-  sequence makeCalibFKtClosure    = {factFKt4   & factFKt6  }
+# sequence makeCalibSconeClosure  = {factScone5 & factScone7}
+  sequence makeCalibFKtClosure    = {factFKt6  }
   sequence makeCalibClosure       = {makeCalibIconeClosure & 
                                      makeCalibMconeClosure &
-                                     makeCalibSconeClosure &
                                      makeCalibFKtClosure}
