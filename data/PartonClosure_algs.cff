@@ -30,8 +30,8 @@
 # sequence makeCalibFKt4Closure   = {factFKt4  }
   sequence makeCalibFKt6Closure   = {factFKt6  }
   sequence makeCalibIconeClosure  = {factIcone5}
-# sequence makeCalibMconeClosure  = {factMcone5 & factMcone7}
-  sequence makeCalibSconeClosure  = {factScone5 & factScone7}
+  sequence makeCalibMconeClosure  = {factMcone5 & factMcone7}
+# sequence makeCalibSconeClosure  = {factScone5 & factScone7}
   sequence makeCalibFKtClosure    = {factFKt6  }
   sequence makeCalibClosure       = {makeCalibIconeClosure & 
                                      makeCalibMconeClosure &
