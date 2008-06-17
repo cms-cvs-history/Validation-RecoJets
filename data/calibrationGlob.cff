@@ -7,4 +7,7 @@
 # sequences
 #
   sequence makeGlobIcone5 = {makeUhhCaliIterativeCone5Jets}
-  sequence makeGlobAll    = {makeUhhCaliIterativeCone5Jets}
+  sequence makeGlobMcone5 = {makeUhhCaliMidPointCone5Jets }
+  sequence makeGlobMcone7 = {makeUhhCaliMidPointCone7Jets }
+  sequence makeGlobFKt6   = {makeUhhCaliFastjet6Jets}
+  sequence makeGlobAll    = {makeGlobIcone5, makeGlobImcone5, makeGlobImcone7, makeGlobFKt6}

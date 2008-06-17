@@ -12,17 +12,17 @@
 # replace jet collection corresponding to calibration method
 # ---------------------------------------------------------------
 #
-  replace globVsFact.recs = uhhCaliFastKt6
+  replace globVsFact.recs = uhhCaliFastjet6
   replace globVsFact.refs = L3JetCorJetFKt6
   replace factVsGlob.recs = L3JetCorJetFKt6
   replace factVsGlob.refs = uhhCaliFastKt6
 #
-  replace globVsMono.recs = uhhCaliFastKt6
+  replace globVsMono.recs = uhhCaliFastjet6
   replace globVsMono.refs = MCJetCorJetFKt6
   replace monoVsGlob.recs = MCJetCorJetFKt6
   replace monoVsGlob.refs = uhhCaliFastKt6
 #
-  replace factVsMono.recs = L3JetCorJetFKt6
+  replace factVsMono.recs = L3JetCorJetjet6
   replace factVsMono.refs = MCJetCorJetFKt6
   replace monoVsFact.recs = MCJetCorJetFKt6
   replace monoVsFact.refs = L3JetCorJetFKt6
