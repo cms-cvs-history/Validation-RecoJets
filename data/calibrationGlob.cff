@@ -10,4 +10,4 @@
   sequence makeGlobMcone5 = {makeUhhCaliMidPointCone5Jets }
   sequence makeGlobMcone7 = {makeUhhCaliMidPointCone7Jets }
   sequence makeGlobFKt6   = {makeUhhCaliFastjet6Jets}
-  sequence makeGlobAll    = {makeGlobIcone5, makeGlobImcone5, makeGlobImcone7, makeGlobFKt6}
+  sequence makeGlobAll    = {makeGlobIcone5, makeGlobMcone5, makeGlobMcone7, makeGlobFKt6}
