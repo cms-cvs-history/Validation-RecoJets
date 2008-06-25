@@ -2,3 +2,4 @@
 <use name=rootcore>
 
 <bin file=compareHists.cc></bin>	
+<bin file=plotHists.cc></bin>
