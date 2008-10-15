@@ -30,7 +30,7 @@
 # ---------------------------------------------------------------
 # prepare JetComparison fully steerable
 # ---------------------------------------------------------------
-  include "Calibration/CalibUtils/data/CompareCalibs.cfi"
+  include "Validation/RecoJets/data/CompareCalibs.cfi"
 
 # reconfigure reference collection
 # replace compareCalibs.refs = iterativeCone5CaloJets

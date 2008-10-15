@@ -1,10 +1,10 @@
 # ---------------------------------------------------------------
 # prepare JetComparison for std calibration methods
 # ---------------------------------------------------------------
-  module  uhhVsFact = compareCalibs from "Calibration/CalibUtils/data/CompareCalibs.cfi"
-  module  factVsUhh = compareCalibs from "Calibration/CalibUtils/data/CompareCalibs.cfi"
-  module  uhhVsMono = compareCalibs from "Calibration/CalibUtils/data/CompareCalibs.cfi"
-  module  monoVsUhh = compareCalibs from "Calibration/CalibUtils/data/CompareCalibs.cfi"
+  module  uhhVsFact = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+  module  factVsUhh = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+  module  uhhVsMono = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
+  module  monoVsUhh = compareCalibs from "Validation/RecoJets/data/CompareCalibs.cfi"
 
 # ---------------------------------------------------------------
 # replace jet collection corresponding to calibration method
@@ -30,7 +30,7 @@
 # ---------------------------------------------------------------
 # prepare JetComparison fully steerable
 # ---------------------------------------------------------------
-  include "Calibration/CalibUtils/data/CompareCalibs.cfi"
+  include "Validation/RecoJets/data/CompareCalibs.cfi"
 
 # reconfigure reference collection
 # replace compareCalibs.refs = iterativeCone5CaloJets
