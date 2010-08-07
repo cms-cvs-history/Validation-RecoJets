@@ -63,9 +63,9 @@ CalibClosureTest::configBlockSpecific(ConfigFile& cfg)
     readVector ( cfg.read<std::string>( "cmpObjectLabels"), cmpObjLabelList_ );
   }
   catch(...){
-    cerr << "ERROR during reading of config file" << endl;
-    cerr << "      misspelled variables in cfg ?" << endl;
-    cerr << "      [--called in configBlockSpecific--]" << endl;
+    std::cerr << "ERROR during reading of config file" << std::endl;
+    std::cerr << "      misspelled variables in cfg ?" << std::endl;
+    std::cerr << "      [--called in configBlockSpecific--]" << std::endl;
     std::exit(1);
   }
 }
@@ -224,8 +224,8 @@ int main(int argc, char* argv[])
   gStyle->SetStatH(0.18);
 
   if( argc<2 ){
-    cerr << "ERROR:" 
-	 << " Missing argument" << endl;
+    std::cerr << "ERROR:" 
+	 << " Missing argument" << std::endl;
     return 1;
   }
 
@@ -242,14 +242,14 @@ int main(int argc, char* argv[])
     plots.fillTargetHistograms();
     plots.drawEps();
   } else{
-    cerr << "ERROR:"
+    std::cerr << "ERROR:"
 	 << " Unknown file format requested: "
-	 << plots.writeAs() << endl; 
+	 << plots.writeAs() << std::endl; 
     return -1;
   } 
   plots.drawEff();
   plots.drawCorrel();
 
-  cout << "works " << "thanx and GoodBye " << endl; 
+  std::cout << "works " << "thanx and GoodBye " << std::endl; 
   return 0;
 }

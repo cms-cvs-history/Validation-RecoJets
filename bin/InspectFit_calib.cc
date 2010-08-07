@@ -41,8 +41,8 @@ int main(int argc, char* argv[])
   gStyle->SetStatH(0.18);
 
   if( argc<2 ){
-    cerr << "ERROR:" 
-	 << " Missing argument" << endl;
+    std::cerr << "ERROR:" 
+	 << " Missing argument" << std::endl;
     return 1;
   }
 
@@ -57,22 +57,22 @@ int main(int argc, char* argv[])
     } else if( !strcmp(plots.writeAs().c_str(), "eps") ){
       plots.fitAndDrawEps();
     } else{
-      cerr << "ERROR:"
+      std::cerr << "ERROR:"
 	   << " Unknown file format requested: "
-	   << plots.writeAs() << endl; 
+	   << plots.writeAs() << std::endl; 
       return -1;
     }
     plots.fillTargetHistograms();
     plots.writeFitOutput();
   }
   catch(char* str){
-    cerr << "ERROR: " << str << endl;
+    std::cerr << "ERROR: " << str << std::endl;
     return 1;
   }
   catch(...){
-    cerr << "ERROR: this one is new...";
+    std::cerr << "ERROR: this one is new...";
       return 1;
   }
-  cout << "works " << "thanx and GoodBye " << endl; 
+  std::cout << "works " << "thanx and GoodBye " << std::endl; 
   return 0;
 }
